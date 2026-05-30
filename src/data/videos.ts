@@ -9,6 +9,7 @@ export interface Video {
   tags: string[];
   sourceName: string;
   sourceUrl: string;
+  gallery?: string[];
 }
 
 export const videos: Video[] = [
@@ -22,7 +23,13 @@ export const videos: Video[] = [
     category: "Trending",
     tags: ["cyberpunk", "gaming", "neon", "trailer"],
     sourceName: "YouTube",
-    sourceUrl: "https://youtube.com/watch?v=8X2kIfS6fb8"
+    sourceUrl: "https://youtube.com/watch?v=8X2kIfS6fb8",
+    gallery: [
+      "https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1534423861386-85a16f5d13fd?q=80&w=1200&auto=format&fit=crop"
+    ]
   },
   {
     id: "v2",
@@ -34,7 +41,13 @@ export const videos: Video[] = [
     category: "VR",
     tags: ["vr", "comedy", "community"],
     sourceName: "Twitch",
-    sourceUrl: "https://twitch.tv"
+    sourceUrl: "https://twitch.tv",
+    gallery: [
+      "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop"
+    ]
   },
   {
     id: "v3",
@@ -46,7 +59,13 @@ export const videos: Video[] = [
     category: "Cosplay",
     tags: ["cosplay", "comic-con", "art"],
     sourceName: "Vimeo",
-    sourceUrl: "https://vimeo.com"
+    sourceUrl: "https://vimeo.com",
+    gallery: [
+      "https://images.unsplash.com/photo-1608889175250-c3b0c1667d3a?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1612036782180-6f0b6ce846ce?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=1200&auto=format&fit=crop"
+    ]
   },
   {
     id: "v4",
@@ -58,7 +77,13 @@ export const videos: Video[] = [
     category: "Amateur",
     tags: ["devlog", "coding", "indiedev"],
     sourceName: "YouTube",
-    sourceUrl: "https://youtube.com"
+    sourceUrl: "https://youtube.com",
+    gallery: [
+      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop"
+    ]
   },
   {
     id: "v5",
@@ -70,7 +95,13 @@ export const videos: Video[] = [
     category: "Featured",
     tags: ["drone", "tokyo", "cinematic", "neon"],
     sourceName: "YouTube",
-    sourceUrl: "https://youtube.com"
+    sourceUrl: "https://youtube.com",
+    gallery: [
+      "https://images.unsplash.com/photo-1542051812871-f923b7a54a01?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1532522714534-53626c0ae561?q=80&w=1200&auto=format&fit=crop"
+    ]
   },
   {
     id: "v6",
@@ -82,6 +113,12 @@ export const videos: Video[] = [
     category: "Trending",
     tags: ["music", "synthwave", "retrowave", "mix"],
     sourceName: "SoundCloud",
-    sourceUrl: "https://soundcloud.com"
+    sourceUrl: "https://soundcloud.com",
+    gallery: [
+      "https://images.unsplash.com/photo-1614729939124-03290b55c9ce?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?q=80&w=1200&auto=format&fit=crop"
+    ]
   }
 ];
