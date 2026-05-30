@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { videos } from "@/data/videos";
-import {Clock, ChevronLeft, ExternalLink, Tag} from "lucide-react";
+import {Clock, ChevronLeft, Tag} from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
 import { GenerateLinkAction } from "./GenerateLinkAction";

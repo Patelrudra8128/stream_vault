@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { videos } from "@/data/videos";
-import { ExternalLink, Clock, Tag, ChevronLeft } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
 
@@ -20,8 +20,6 @@ export default function VideoPage({ params }: { params: { slug: string } }) {
   if (!video) {
     notFound();
   }
-
-  const relatedVideos = videos.filter((v) => v.category === video.category && v.id !== video.id).slice(0, 3);
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
