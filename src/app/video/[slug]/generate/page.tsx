@@ -54,42 +54,42 @@ export default function GenerateLinkPage({ params }: { params: { slug: string } 
         </div>
 
         {/* Action Bar */}
-        <div className="mt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 rounded-2xl glass p-6">
-          <div className="flex items-center gap-6 text-sm text-gray-300">
-            <div className="flex items-center gap-2">
-              <Clock className="h-5 w-5 text-neon-blue"/>
-              <span>{video.duration}</span>
-            </div>
-            <div className="flex items-center gap-2">
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white/10 text-xs font-bold">
-                  {video.sourceName.charAt(0)}
-                </span>
-              <span>{video.sourceName}</span>
-            </div>
-          </div>
+        <div className="mt-6 flex flex-col sm:flex-row sm:items-center justify-center gap-4 rounded-2xl glass p-6">
+          {/*<div className="flex items-center gap-6 text-sm text-gray-300">*/}
+          {/*  <div className="flex items-center gap-2">*/}
+          {/*    <Clock className="h-5 w-5 text-neon-blue"/>*/}
+          {/*    <span>{video.duration}</span>*/}
+          {/*  </div>*/}
+          {/*  <div className="flex items-center gap-2">*/}
+          {/*      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white/10 text-xs font-bold">*/}
+          {/*        {video.sourceName.charAt(0)}*/}
+          {/*      </span>*/}
+          {/*    <span>{video.sourceName}</span>*/}
+          {/*  </div>*/}
+          {/*</div>*/}
 
           <GenerateLinkAction />
         </div>
 
         {/* Description & Tags */}
-        <div className="mt-8">
-          <h2 className="mb-4 text-xl font-bold text-white">About this video</h2>
-          <p className="text-gray-400 leading-relaxed text-lg">
-            {video.description}
-          </p>
+        {/*<div className="mt-8">*/}
+        {/*  <h2 className="mb-4 text-xl font-bold text-white">About this video</h2>*/}
+        {/*  <p className="text-gray-400 leading-relaxed text-lg">*/}
+        {/*    {video.description}*/}
+        {/*  </p>*/}
 
-          <div className="mt-8 flex flex-wrap gap-2">
-            <Tag className="h-5 w-5 text-neon-pink mr-2"/>
-            {video.tags.map((tag) => (
-                <span
-                    key={tag}
-                    className="rounded-full border border-white/10 bg-white/5 px-4 py-1 text-sm text-gray-300 hover:border-neon-pink/50 hover:text-white transition-colors cursor-default"
-                >
-                  #{tag}
-                </span>
-            ))}
-          </div>
-        </div>
+        {/*  <div className="mt-8 flex flex-wrap gap-2">*/}
+        {/*    <Tag className="h-5 w-5 text-neon-pink mr-2"/>*/}
+        {/*    {video.tags.map((tag) => (*/}
+        {/*        <span*/}
+        {/*            key={tag}*/}
+        {/*            className="rounded-full border border-white/10 bg-white/5 px-4 py-1 text-sm text-gray-300 hover:border-neon-pink/50 hover:text-white transition-colors cursor-default"*/}
+        {/*        >*/}
+        {/*          #{tag}*/}
+        {/*        </span>*/}
+        {/*    ))}*/}
+        {/*  </div>*/}
+        {/*</div>*/}
 
         {/* Gallery */}
         {video.gallery && video.gallery.length > 0 && (

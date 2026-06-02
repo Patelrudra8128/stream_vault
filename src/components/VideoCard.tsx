@@ -40,14 +40,14 @@ export default function VideoCard({ video }: { video: Video }) {
           {video.title}
         </h3>
         
-        <div className="flex items-center justify-between text-xs text-gray-400">
-          <div className="flex items-center gap-1.5">
-            <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-[10px]">
-              {video.sourceName.charAt(0)}
-            </span>
-            {video.sourceName}
-          </div>
-        </div>
+        {/*<div className="flex items-center justify-between text-xs text-gray-400">*/}
+        {/*  <div className="flex items-center gap-1.5">*/}
+        {/*    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/10 text-[10px]">*/}
+        {/*      {video.sourceName.charAt(0)}*/}
+        {/*    </span>*/}
+        {/*    {video.sourceName}*/}
+        {/*  </div>*/}
+        {/*</div>*/}
       </div>
     </Link>
   );

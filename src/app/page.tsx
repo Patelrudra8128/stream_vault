@@ -30,21 +30,21 @@ export default function Home() {
       </div>
 
       {/* Categories */}
-      <div className="mb-8 flex flex-wrap gap-3">
-        {CATEGORIES.map((cat) => (
-          <button
-            key={cat}
-            onClick={() => setActiveCategory(cat)}
-            className={`rounded-full px-5 py-2 text-sm font-medium transition-all ${
-              activeCategory === cat
-                ? "bg-gradient-to-r from-neon-blue to-neon-purple text-white shadow-lg shadow-neon-blue/20"
-                : "bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white border border-white/10"
-            }`}
-          >
-            {cat}
-          </button>
-        ))}
-      </div>
+      {/*<div className="mb-8 flex flex-wrap gap-3">*/}
+      {/*  {CATEGORIES.map((cat) => (*/}
+      {/*    <button*/}
+      {/*      key={cat}*/}
+      {/*      onClick={() => setActiveCategory(cat)}*/}
+      {/*      className={`rounded-full px-5 py-2 text-sm font-medium transition-all ${*/}
+      {/*        activeCategory === cat*/}
+      {/*          ? "bg-gradient-to-r from-neon-blue to-neon-purple text-white shadow-lg shadow-neon-blue/20"*/}
+      {/*          : "bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white border border-white/10"*/}
+      {/*      }`}*/}
+      {/*    >*/}
+      {/*      {cat}*/}
+      {/*    </button>*/}
+      {/*  ))}*/}
+      {/*</div>*/}
 
       {/* Video Grid */}
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
