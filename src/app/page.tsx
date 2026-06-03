@@ -27,15 +27,15 @@ function HomeContent() {
     setActiveCategory("All");
   }, [categoryParam]);
 
-  const handleCategoryChange = (cat: string) => {
-    setActiveCategory(cat);
-    const searchPart = searchQuery ? `&search=${encodeURIComponent(searchQuery)}` : "";
-    if (cat === "All") {
-      router.push(searchQuery ? `/?search=${encodeURIComponent(searchQuery)}` : "/");
-    } else {
-      router.push(`/?category=${encodeURIComponent(cat)}${searchPart}`);
-    }
-  };
+  // const handleCategoryChange = (cat: string) => {
+  //   setActiveCategory(cat);
+  //   const searchPart = searchQuery ? `&search=${encodeURIComponent(searchQuery)}` : "";
+  //   if (cat === "All") {
+  //     router.push(searchQuery ? `/?search=${encodeURIComponent(searchQuery)}` : "/");
+  //   } else {
+  //     router.push(`/?category=${encodeURIComponent(cat)}${searchPart}`);
+  //   }
+  // };
 
   const filteredVideos = videos.filter((video) => {
     const matchesCategory =
@@ -67,21 +67,21 @@ function HomeContent() {
       </div>
 
       {/* Categories */}
-      <div className="mb-8 flex flex-wrap gap-3 justify-center sm:justify-start">
-        {CATEGORIES.map((cat) => (
-          <button
-            key={cat}
-            onClick={() => handleCategoryChange(cat)}
-            className={`rounded-xl px-5 py-2.5 text-sm font-semibold transition-all duration-200 border ${
-              activeCategory === cat
-                ? "bg-blue-600 text-white border-transparent shadow-md shadow-blue-500/10 scale-105"
-                : "bg-slate-900/80 text-slate-400 hover:bg-slate-800 hover:text-white border-slate-800"
-            }`}
-          >
-            {cat}
-          </button>
-        ))}
-      </div>
+      {/*<div className="mb-8 flex flex-wrap gap-3 justify-center sm:justify-start">*/}
+      {/*  {CATEGORIES.map((cat) => (*/}
+      {/*    <button*/}
+      {/*      key={cat}*/}
+      {/*      onClick={() => handleCategoryChange(cat)}*/}
+      {/*      className={`rounded-xl px-5 py-2.5 text-sm font-semibold transition-all duration-200 border ${*/}
+      {/*        activeCategory === cat*/}
+      {/*          ? "bg-blue-600 text-white border-transparent shadow-md shadow-blue-500/10 scale-105"*/}
+      {/*          : "bg-slate-900/80 text-slate-400 hover:bg-slate-800 hover:text-white border-slate-800"*/}
+      {/*      }`}*/}
+      {/*    >*/}
+      {/*      {cat}*/}
+      {/*    </button>*/}
+      {/*  ))}*/}
+      {/*</div>*/}
 
       {/* Search query status banner */}
       {searchQuery && (
