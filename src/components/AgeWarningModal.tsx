@@ -4,10 +4,12 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { AlertTriangle } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export default function AgeWarningModal() {
   const [isOpen, setIsOpen] = useState(false);
   const [isAgreed, setIsAgreed] = useState(false);
+  const pathname = usePathname();
 
   const getCookie = (name: string): string | null => {
     if (typeof document === "undefined") return null;
@@ -18,6 +20,12 @@ export default function AgeWarningModal() {
   };
 
   useEffect(() => {
+    if (pathname === "/terms" || pathname === "/privacy") {
+      setIsOpen(false);
+      document.body.style.overflow = "auto";
+      return;
+    }
+
     const hasAcceptedAge = getCookie("streamvault_age_accepted") === "true";
     if (hasAcceptedAge) {
       setIsOpen(false);
@@ -27,7 +35,7 @@ export default function AgeWarningModal() {
       setIsOpen(true);
       document.body.style.overflow = "hidden";
     }
-  }, []);
+  }, [pathname]);
 
   const handleAccept = () => {
     setIsOpen(false);

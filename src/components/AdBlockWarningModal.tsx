@@ -3,11 +3,19 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ShieldAlert } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export default function AdBlockWarningModal() {
   const [isAdBlockActive, setIsAdBlockActive] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
+    if (pathname === "/terms" || pathname === "/privacy") {
+      setIsAdBlockActive(false);
+      document.body.style.overflow = "auto";
+      return;
+    }
+
     const checkAdBlock = async () => {
       // 1. DOM Check: Append dummy element with typical ad-related class names
       const dummy = document.createElement("div");
@@ -49,13 +57,15 @@ export default function AdBlockWarningModal() {
       }
 
       if (isBlocked) {
-        setIsAdBlockActive(true);
-        document.body.style.overflow = "hidden";
+        if (window.location.pathname !== "/terms" && window.location.pathname !== "/privacy") {
+          setIsAdBlockActive(true);
+          document.body.style.overflow = "hidden";
+        }
       }
     };
 
     checkAdBlock();
-  }, []);
+  }, [pathname]);
 
   const handleRefresh = () => {
     window.location.reload();
