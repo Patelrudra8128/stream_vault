@@ -31,6 +31,24 @@ export const videos: Video[] = [
       "/1/4.jfif",
     ]
   },
+  {
+    id: "v2",
+    slug: "v2",
+    title: "Sexy Girl getting pumped hard in doggy style by jija ji",
+    description: "Experience the vibrant, dangerous world of Night City in this official gameplay trailer for Cyberpunk 2077. Dive deep into the neon-lit streets.",
+    thumbnail: "/2/thumbnail.jpg",
+    duration: "02:45",
+    category: "Trending",
+    tags: ["cyberpunk", "gaming", "neon", "trailer"],
+    sourceName: "YouTube",
+    sourceUrl: "https://flezen.com/s/d8f6u01bjlnukbcmuncgbtdveinwd4o",
+    gallery: [
+      "/2/1.jpg",
+      "/2/2.jpg",
+      "/2/3.jpg",
+      "/2/4.jpg",
+    ]
+  },
   // {
   //   id: "v2",
   //   slug: "vr-chat-funny-moments",
