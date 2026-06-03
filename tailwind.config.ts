@@ -9,19 +9,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0a0a0a",
-        foreground: "#ededed",
+        background: "#0b0f19", // Midnight Slate
+        foreground: "#f8fafc", // Off-white
+        brand: {
+          blue: "#3b82f6",     // Movie Blue
+          hover: "#2563eb",    // Darker Blue
+          dark: "#0b0f19",
+          surface: "#111827",  // Gray-900
+          border: "#1e293b",   // Slate-800
+        },
         neon: {
-          blue: "#00f0ff",
-          purple: "#b100e8",
-          pink: "#ff007f"
+          blue: "#3b82f6",
+          purple: "#3b82f6",
+          pink: "#2563eb",
         }
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
       animation: {
-        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       }
     },
   },

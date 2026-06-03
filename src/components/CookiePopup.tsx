@@ -62,37 +62,37 @@ export default function CookiePopup() {
           transition={{ duration: 0.4, ease: "easeOut" }}
           className="fixed bottom-4 right-4 z-[60] w-[calc(100%-2rem)] max-w-sm sm:bottom-8 sm:right-8 sm:w-full"
         >
-          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#0a0a0a]/95 p-6 shadow-2xl backdrop-blur-xl">
+          <div className="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/95 p-6 shadow-2xl backdrop-blur-2xl shadow-black/80">
             {/* Top accent line */}
-            <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-neon-purple via-neon-pink to-neon-blue" />
+            <div className="absolute inset-x-0 top-0 h-[3px] bg-blue-600" />
             
             <button 
               onClick={() => setIsVisible(false)}
-              className="absolute right-4 top-4 text-gray-400 hover:text-white transition-colors"
+              className="absolute right-4 top-4 text-slate-400 hover:text-white transition-colors"
             >
               <X className="h-5 w-5" />
             </button>
 
             <div className="flex items-start gap-4">
-              <div className="mt-1 rounded-full bg-neon-pink/10 p-2 text-neon-pink">
-                <Cookie className="h-6 w-6" />
+              <div className="mt-1 rounded-full bg-blue-500/10 p-2.5 text-blue-500">
+                <Cookie className="h-5 w-5" />
               </div>
               <div className="flex-1 pr-6">
-                <h3 className="mb-2 text-lg font-bold text-white">We use cookies</h3>
-                <p className="mb-5 text-sm text-gray-400 leading-relaxed">
+                <h3 className="mb-1.5 text-lg font-bold text-white tracking-tight">We use cookies</h3>
+                <p className="mb-5 text-sm text-slate-400 leading-relaxed">
                   We use cookies to enhance your browsing experience and analyze our traffic. 
                 </p>
                 
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <button
                     onClick={handleAccept}
-                    className="flex-1 rounded-xl bg-gradient-to-r from-neon-purple to-neon-pink py-2.5 text-sm font-bold text-white transition-transform hover:scale-105 active:scale-95 shadow-[0_0_15px_rgba(219,39,119,0.3)]"
+                    className="flex-1 rounded-xl bg-blue-600 py-2.5 text-sm font-bold text-white transition-all hover:bg-blue-500 active:scale-95 shadow-md shadow-blue-500/10"
                   >
                     Accept All
                   </button>
                   <button
                     onClick={handleDecline}
-                    className="flex-1 rounded-xl border border-white/10 bg-white/5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white/10 active:scale-95"
+                    className="flex-1 rounded-xl border border-slate-800 bg-slate-900/50 py-2.5 text-sm font-medium text-slate-300 transition-colors hover:bg-slate-800 active:scale-95"
                   >
                     Decline
                   </button>

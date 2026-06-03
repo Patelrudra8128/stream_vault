@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Suspense } from "react";
 import "./globals.css";
 
 import Navbar from "@/components/Navbar";
@@ -24,10 +25,12 @@ export default function RootLayout({
     <head>
         <script src="https://quge5.com/88/tag.min.js" data-zone="244435" async data-cfasync="false"></script>
     </head>
-    <body className={`${inter.className} min-h-screen bg-[#050505] antialiased selection:bg-neon-pink/30`}>
+    <body className={`${inter.className} min-h-screen bg-[#0b0f19] text-slate-100 antialiased`}>
         <AgeWarningModal />
         <CookiePopup />
-        <Navbar />
+        <Suspense fallback={<div className="h-16 w-full bg-[#0b0f19]" />}>
+          <Navbar />
+        </Suspense>
         <main className="flex-1">{children}</main>
         <Footer />
       </body>

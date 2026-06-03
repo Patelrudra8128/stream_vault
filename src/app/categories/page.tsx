@@ -33,15 +33,15 @@ export default function CategoriesPage() {
           <Link
             key={category}
             href={`/?category=${encodeURIComponent(category)}`}
-            className="group relative flex flex-col items-center justify-center overflow-hidden rounded-2xl glass p-8 transition-all hover:scale-105 hover:border-neon-blue/50 hover:shadow-2xl hover:shadow-neon-blue/20"
+            className="group relative flex flex-col items-center justify-center overflow-hidden rounded-2xl bg-slate-900/60 border border-slate-800 p-8 transition-all duration-200 hover:scale-[1.02] hover:border-blue-500/30 hover:bg-slate-900 shadow-lg"
           >
-            <div className="mb-4 rounded-full bg-white/5 p-4 transition-colors group-hover:bg-neon-blue/20">
-              <Folder className="h-8 w-8 text-gray-300 group-hover:text-neon-blue" />
+            <div className="mb-4 rounded-full bg-slate-800/50 p-4 transition-colors group-hover:bg-blue-500/10">
+              <Folder className="h-8 w-8 text-slate-300 group-hover:text-blue-500 transition-colors" />
             </div>
-            <h2 className="text-xl font-bold text-white transition-colors group-hover:text-neon-blue">
+            <h2 className="text-xl font-bold text-white transition-colors group-hover:text-blue-500">
               {category}
             </h2>
-            <p className="mt-2 text-sm text-gray-400">
+            <p className="mt-2 text-sm text-slate-400">
               {count} {count === 1 ? "Video" : "Videos"}
             </p>
           </Link>
