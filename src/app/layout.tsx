@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AgeWarningModal from "@/components/AgeWarningModal";
+import CookiePopup from "@/components/CookiePopup";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
     </head>
     <body className={`${inter.className} min-h-screen bg-[#050505] antialiased selection:bg-neon-pink/30`}>
         <AgeWarningModal />
+        <CookiePopup />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
