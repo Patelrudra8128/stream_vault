@@ -13,46 +13,45 @@ export default function PrivacyPage() {
           Privacy Policy
         </h1>
         
-        <div className="space-y-6 text-gray-300 leading-relaxed">
+        <div className="space-y-6 text-slate-300 leading-relaxed">
           <section>
             <h2 className="mb-3 text-xl font-bold text-white">1. Information We Collect</h2>
             <p>
-              StreamVault respects your privacy. We do not require you to create an account to browse 
-              our directory. We may collect non-personally identifiable information such as browser type, 
-              referring site, and the date and time of each visitor request to better understand how 
-              visitors use our website.
+              StreamVault is committed to protecting your privacy. We do not require registration or personal identification to browse 
+              our directory. We automatically collect non-personally identifiable server log information, such as browser version, 
+              referring URLs, and date/time stamps to monitor traffic levels and maintain directory operation.
             </p>
           </section>
 
           <section>
-            <h2 className="mb-3 text-xl font-bold text-white">2. Local Storage & Cookies</h2>
+            <h2 className="mb-3 text-xl font-bold text-white">2. Local Storage & Age-Verification Cookies</h2>
             <p>
-              We use standard browser features like `localStorage` strictly for functional purposes, 
-              such as remembering whether you have accepted our 18+ adult content warning. This ensures 
-              a smoother user experience without repeatedly prompting you.
+              To ensure compliance with age restrictions, we use standard functional cookies and `sessionStorage` strictly to store whether you have 
+              acknowledged the 18+ adult warning screen. The functional cookie (`streamvault_age_accepted`) is retained on your browser so you are not 
+              prompted on every visit. No personally identifiable information is linked to these cookies.
             </p>
           </section>
 
           <section>
-            <h2 className="mb-3 text-xl font-bold text-white">3. Third-Party Content</h2>
+            <h2 className="mb-3 text-xl font-bold text-white">3. Third-Party Networks & Advertising</h2>
             <p>
-              Because StreamVault indexes content hosted elsewhere, clicking on a video link will take 
-              you to a third-party website. These external websites have their own privacy policies and 
-              may use cookies or tracking technologies. We have no control over these third parties.
+              We index links hosted by independent third parties. Once you click an external link to view a video or gallery on a source site, 
+              you are subject to their specific policies. External adult content host sites frequently utilize advertising networks, cookies, 
+              and tracking pixels. StreamVault has no control over, and assumes no responsibility for, scripts or pop-ups deployed by third parties.
             </p>
           </section>
 
           <section>
-            <h2 className="mb-3 text-xl font-bold text-white">4. Data Security</h2>
+            <h2 className="mb-3 text-xl font-bold text-white">4. Data Safety</h2>
             <p>
-              While we strive to use commercially acceptable means to protect your personal information, 
-              no method of transmission over the internet or method of electronic storage is 100% secure. 
-              We cannot guarantee its absolute security.
+              We implement basic security controls to protect the integrity of our directory. However, because communications are transmitted 
+              via the public internet, we cannot guarantee absolute transmission security. We advise users to employ ad blockers and security plugins 
+              for personal safety while exploring third-party links.
             </p>
           </section>
         </div>
         
-        <div className="mt-12 border-t border-white/10 pt-6 text-sm text-gray-500">
+        <div className="mt-12 border-t border-slate-800 pt-6 text-sm text-slate-500">
           Last updated: {new Date().toLocaleDateString()}
         </div>
       </div>

@@ -13,55 +13,54 @@ export default function TermsPage() {
           Terms of Service
         </h1>
         
-        <div className="space-y-6 text-gray-300 leading-relaxed">
+        <div className="space-y-6 text-slate-300 leading-relaxed">
           <section>
-            <h2 className="mb-3 text-xl font-bold text-white">1. Acceptance of Terms</h2>
+            <h2 className="mb-3 text-xl font-bold text-white">1. Acceptance of Terms & Age Restrictions</h2>
             <p>
               By accessing and using StreamVault, you agree to be bound by these Terms of Service. 
-              If you do not agree with any part of these terms, you must not use our website. 
-              You must be at least 18 years of age to use this service.
+              **You must be at least 18 years of age or the age of majority in your jurisdiction, whichever is older, to access or use this website.** 
+              This website indexes and displays links to mature, adult, and sexually explicit content. If you are under 18, do not consent to viewing adult materials, 
+              or find such material offensive, you must exit this website immediately.
             </p>
           </section>
 
           <section>
-            <h2 className="mb-3 text-xl font-bold text-white">2. Nature of Service</h2>
+            <h2 className="mb-3 text-xl font-bold text-white">2. Nature of Service & Adult Content Indexing</h2>
             <p>
-              StreamVault is a directory and search engine for publicly available video content. 
-              We do not host, upload, or control any of the video content indexed on our site. 
-              All video content is hosted by third-party platforms.
+              StreamVault operates strictly as an index and search directory for mature and adult content publicly available on the internet. 
+              We do not host, upload, record, or stream any video content, photographs, or galleries on our own servers. 
+              All external links and gallery previews are hosted by independent, non-affiliated third parties.
             </p>
           </section>
 
           <section>
-            <h2 className="mb-3 text-xl font-bold text-white">3. External Links</h2>
+            <h2 className="mb-3 text-xl font-bold text-white">3. Third-Party Links & Content Disclaimer</h2>
             <p>
-              Our website contains links to third-party websites. We are not responsible for the 
-              content, privacy policies, or practices of any third-party websites or services. 
-              You acknowledge and agree that StreamVault shall not be liable for any damage or loss 
-              caused by your use of such external content.
+              Our directory lists links leading to external websites containing mature or sexually explicit material. We do not control, monitor, 
+              endorse, or accept responsibility for the content, advertisements, privacy policies, safety, or practices of any third-party websites or services. 
+              You acknowledge and agree that StreamVault shall not be held liable for any damages, losses, or issues arising from your access to such external links.
             </p>
           </section>
 
           <section>
-            <h2 className="mb-3 text-xl font-bold text-white">4. User Conduct</h2>
+            <h2 className="mb-3 text-xl font-bold text-white">4. User Compliance & Conduct</h2>
             <p>
-              You agree to use StreamVault only for lawful purposes. You must not use our service 
-              in any way that causes, or may cause, damage to the website or impairment of the 
-              availability or accessibility of the service.
+              You agree to use StreamVault only for personal, lawful purposes. You represent that viewing adult material is legal in your community or jurisdiction. 
+              You must not attempt to bypass access screens, scrape content inappropriately, or use our indexing service for any unlawful activities.
             </p>
           </section>
 
           <section>
-            <h2 className="mb-3 text-xl font-bold text-white">5. Changes to Terms</h2>
+            <h2 className="mb-3 text-xl font-bold text-white">5. Intellectual Property & DMCA removal</h2>
             <p>
-              We reserve the right to modify these terms at any time. We will notify users of any 
-              changes by updating the date at the bottom of this page. Your continued use of the 
-              site after such changes constitutes your acceptance of the new Terms of Service.
+              All trademarks and indexing lists are the property of their respective owners. Since we only index third-party links, 
+              removal requests for original videos must be sent directly to the respective host platforms. If you wish to request the removal of an index link 
+              from StreamVault, please contact us with the specific URLs for review.
             </p>
           </section>
         </div>
         
-        <div className="mt-12 border-t border-white/10 pt-6 text-sm text-gray-500">
+        <div className="mt-12 border-t border-slate-800 pt-6 text-sm text-slate-500">
           Last updated: {new Date().toLocaleDateString()}
         </div>
       </div>
