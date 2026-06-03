@@ -19,6 +19,14 @@ export default function AgeWarningModal() {
     return null;
   };
 
+  const setCookie = (name: string, value: string, days: number = 365) => {
+    if (typeof document === "undefined") return;
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = `; expires=${date.toUTCString()}`;
+    document.cookie = `${name}=${value || ""}${expires}; path=/; SameSite=Lax`;
+  };
+
   useEffect(() => {
     if (pathname === "/terms" || pathname === "/privacy") {
       setIsOpen(false);
@@ -38,6 +46,7 @@ export default function AgeWarningModal() {
   }, [pathname]);
 
   const handleAccept = () => {
+    setCookie("streamvault_age_accepted", "true", 365);
     setIsOpen(false);
     document.body.style.overflow = "auto";
     // Let CookiePopup know it can display
