@@ -91,6 +91,25 @@ export const videos: Video[] = [
       "/4/5.jpg",
     ]
   },
+  {
+    id: "v5",
+    slug: "v5",
+    title: "Don't Judge A Book By Its Cover, She Proves Why",
+    description: "Experience the vibrant, dangerous world of Night City in this official gameplay trailer for Cyberpunk 2077. Dive deep into the neon-lit streets.",
+    thumbnail: "/5/1.jpg",
+    duration: "01:06",
+    category: "Trending",
+    tags: ["cyberpunk", "gaming", "neon", "trailer"],
+    sourceName: "YouTube",
+    sourceUrl: "https://flezen.com/s/d8f6pq1bjlnukbcmtbd0u6u9fss01mu",
+    gallery: [
+      "/5/1.jpg",
+      "/5/2.jpg",
+      "/5/3.jpg",
+      "/5/4.jpg",
+      "/5/5.jpg",
+    ]
+  },
   // {
   //   id: "v2",
   //   slug: "vr-chat-funny-moments",
