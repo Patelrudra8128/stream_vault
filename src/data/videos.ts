@@ -128,6 +128,27 @@ export const videos: Video[] = [
       "/6/4.jpg",
     ]
   },
+  {
+    id: "v7",
+    slug: "v7",
+    title: "Fun with friend after breakup",
+    description: "Experience the vibrant, dangerous world of Night City in this official gameplay trailer for Cyberpunk 2077. Dive deep into the neon-lit streets.",
+    thumbnail: "/7/video_2026-06-04_22-10-55.mp4",
+    duration: "12:49",
+    category: "Trending",
+    tags: ["cyberpunk", "gaming", "neon", "trailer"],
+    sourceName: "YouTube",
+    sourceUrl: "https://flezen.com/s/d8f6ns9bjlnukbcmsnh0s6up6xjxeqw",
+    gallery: [
+      "/7/1.jpg",
+      "/7/2.jpg",
+      "/7/3.jpg",
+      "/7/4.jpg",
+      "7/5.jpg",
+      "/7/6.jpg",
+      "/7/7.jpg",
+    ]
+  },
   // {
   //   id: "v2",
   //   slug: "vr-chat-funny-moments",
