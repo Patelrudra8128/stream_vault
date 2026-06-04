@@ -49,6 +49,24 @@ export const videos: Video[] = [
       "/2/4.jpg",
     ]
   },
+  {
+    id: "v3",
+    slug: "v3",
+    title: "Step sister having fun with step brother",
+    description: "Experience the vibrant, dangerous world of Night City in this official gameplay trailer for Cyberpunk 2077. Dive deep into the neon-lit streets.",
+    thumbnail: "/3/1.jpg",
+    duration: "01:36",
+    category: "Trending",
+    tags: ["cyberpunk", "gaming", "neon", "trailer"],
+    sourceName: "YouTube",
+    sourceUrl: "https://flezen.com/s/d8ck6nhbjlnprs5ioitg6pag6bhwhfu",
+    gallery: [
+      "/3/1.jpg",
+      "/3/2.jpg",
+      "/3/3.jpg",
+      "/3/4.jpg",
+    ]
+  },
   // {
   //   id: "v2",
   //   slug: "vr-chat-funny-moments",
