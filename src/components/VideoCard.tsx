@@ -3,10 +3,37 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
+import { useState, useEffect } from "react";
 import { isVideoUrl, type Video } from "@/data/videos";
 
 export default function VideoCard({ video }: { video: Video }) {
   const isVideo = isVideoUrl(video.thumbnail);
+  
+  // Construct the array of images to cycle through
+  const previewImages = video.gallery && video.gallery.length > 0
+    ? [video.thumbnail, ...video.gallery.filter((img) => img !== video.thumbnail)]
+    : [video.thumbnail];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    if (isVideo || previewImages.length <= 1) return;
+
+    // Stagger the start time randomly between 0 and 1500ms to make the page feel alive and natural
+    const startDelay = Math.random() * 1500;
+    let interval: NodeJS.Timeout;
+
+    const timeout = setTimeout(() => {
+      interval = setInterval(() => {
+        setCurrentImageIndex((prev) => (prev + 1) % previewImages.length);
+      }, 2000);
+    }, startDelay);
+
+    return () => {
+      clearTimeout(timeout);
+      if (interval) clearInterval(interval);
+    };
+  }, [isVideo, previewImages.length]);
 
   return (
     <Link
@@ -31,7 +58,7 @@ export default function VideoCard({ video }: { video: Video }) {
           <motion.img
             whileHover={{ scale: 1.04 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            src={video.thumbnail}
+            src={previewImages[currentImageIndex]}
             alt={video.title}
             className="h-full w-full object-cover opacity-85 transition-opacity duration-300 group-hover:opacity-100"
           />
@@ -41,7 +68,7 @@ export default function VideoCard({ video }: { video: Video }) {
         <div className="absolute bottom-2.5 right-2.5 rounded-lg bg-black/75 px-2 py-1 text-xs font-semibold text-slate-300 backdrop-blur-md border border-slate-800">
           {video.duration}
         </div>
-        <div className="absolute left-2.5 top-2.5 rounded-lg bg-blue-600 px-2.5 py-1 text-[10px] font-extrabold tracking-wider uppercase text-white shadow-md">
+        <div className="absolute left-0 top-2 bg-blue-600 px-2.5 py-1 text-[10px] font-extrabold tracking-wider uppercase text-white shadow-md">
           {video.category}
         </div>
 
