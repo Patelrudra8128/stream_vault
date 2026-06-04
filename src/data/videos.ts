@@ -12,6 +12,11 @@ export interface Video {
   gallery?: string[];
 }
 
+export function isVideoUrl(url?: string): boolean {
+  if (!url) return false;
+  return /\.(mp4|webm|ogg|mov|m4v)($|\?)/i.test(url);
+}
+
 export const videos: Video[] = [
   {
     id: "v1",
@@ -65,6 +70,25 @@ export const videos: Video[] = [
       "/3/2.jpg",
       "/3/3.jpg",
       "/3/4.jpg",
+    ]
+  },
+  {
+    id: "v4",
+    slug: "v4",
+    title: "Finally Devar ne apni bhabhi ko dene k liye mana hi liya",
+    description: "Experience the vibrant, dangerous world of Night City in this official gameplay trailer for Cyberpunk 2077. Dive deep into the neon-lit streets.",
+    thumbnail: "/4/video_2026-06-04_17-32-37.mp4",
+    duration: "01:06",
+    category: "Trending",
+    tags: ["cyberpunk", "gaming", "neon", "trailer"],
+    sourceName: "YouTube",
+    sourceUrl: "https://flezen.com/s/d8dga79bjlnnn06pv4jgeufkulu1lfi",
+    gallery: [
+      "/4/1.jpg",
+      "/4/2.jpg",
+      "/4/3.jpg",
+      "/4/4.jpg",
+      "/4/5.jpg",
     ]
   },
   // {

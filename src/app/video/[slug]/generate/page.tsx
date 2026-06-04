@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { videos } from "@/data/videos";
+import { videos, isVideoUrl } from "@/data/videos";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
@@ -34,8 +34,19 @@ export default function GenerateLinkPage({ params }: { params: { slug: string } 
 
       {/* Banner */}
       <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-slate-950 border border-slate-800 shadow-2xl">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={video.thumbnail} alt={video.title} className="h-full w-full object-cover opacity-90" />
+        {isVideoUrl(video.thumbnail) ? (
+          <video
+            src={video.thumbnail}
+            className="h-full w-full object-cover opacity-90"
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
+        ) : (
+          /* eslint-disable-next-line @next/next/no-img-element */
+          <img src={video.thumbnail} alt={video.title} className="h-full w-full object-cover opacity-90" />
+        )}
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
 
