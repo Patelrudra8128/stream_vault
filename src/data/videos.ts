@@ -110,6 +110,24 @@ export const videos: Video[] = [
       "/5/5.jpg",
     ]
   },
+  {
+    id: "v6",
+    slug: "v6",
+    title: "Tissue lelo yaar",
+    description: "Experience the vibrant, dangerous world of Night City in this official gameplay trailer for Cyberpunk 2077. Dive deep into the neon-lit streets.",
+    thumbnail: "/6/video_2026-06-04_21-31-19.mp4",
+    duration: "00:52",
+    category: "Trending",
+    tags: ["cyberpunk", "gaming", "neon", "trailer"],
+    sourceName: "YouTube",
+    sourceUrl: "https://flezen.com/s/d8f6o89bjlnukbcmsr40dux-ftgyqz0",
+    gallery: [
+      "/6/1.jpg",
+      "/6/2.jpg",
+      "/6/3.jpg",
+      "/6/4.jpg",
+    ]
+  },
   // {
   //   id: "v2",
   //   slug: "vr-chat-funny-moments",
