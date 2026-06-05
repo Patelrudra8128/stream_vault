@@ -261,7 +261,7 @@ export default function VideoPlayerMock({ video }: VideoPlayerMockProps) {
                 }`}
               >
                 <ThumbsUp className="h-4 w-4" />
-                <span>{likeCount.toLocaleString()}</span>
+                <span>{likeCount.toLocaleString("en-US")}</span>
               </button>
               <button 
                 onClick={handleDislike}
@@ -270,7 +270,7 @@ export default function VideoPlayerMock({ video }: VideoPlayerMockProps) {
                 }`}
               >
                 <ThumbsDown className="h-4 w-4" />
-                <span>{dislikeCount.toLocaleString()}</span>
+                <span>{dislikeCount.toLocaleString("en-US")}</span>
               </button>
             </div>
 
