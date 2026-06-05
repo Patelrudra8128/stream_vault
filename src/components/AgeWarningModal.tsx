@@ -74,23 +74,23 @@ export default function AgeWarningModal() {
             initial={{ scale: 0.9, opacity: 0, y: 20 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.9, opacity: 0, y: 20 }}
-            className="relative w-full max-w-md overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-2xl shadow-black/80"
+            className="relative w-full max-w-md overflow-hidden rounded-2xl border border-zinc-900 bg-zinc-950 shadow-2xl shadow-black/90"
           >
             {/* Top accent line */}
-            <div className="h-[3px] w-full bg-blue-600" />
+            <div className="h-[3px] w-full bg-[#ff9900]" />
             
             <div className="p-8">
               <div className="mb-6 flex justify-center">
-                <div className="rounded-full bg-red-500/10 p-4">
-                  <AlertTriangle className="h-12 w-12 text-red-500" />
+                <div className="rounded-full bg-[#ff9900]/10 p-4">
+                  <AlertTriangle className="h-12 w-12 text-[#ff9900]" />
                 </div>
               </div>
 
-              <h2 className="mb-3 text-center text-2xl font-bold text-white tracking-tight">
+              <h2 className="mb-3 text-center text-2xl font-black text-white tracking-tight uppercase">
                 18+ Adult Content Warning
               </h2>
               
-              <p className="mb-6 text-center text-sm text-slate-400 leading-relaxed">
+              <p className="mb-6 text-center text-xs text-zinc-400 leading-relaxed font-semibold">
                 This website contains index listings of content that may be inappropriate for minors. 
                 By entering, you confirm that you are at least 18 years of age or the age of majority 
                 in your jurisdiction, and you agree to view such content.
@@ -102,15 +102,15 @@ export default function AgeWarningModal() {
                   type="checkbox"
                   checked={isAgreed}
                   onChange={(e) => setIsAgreed(e.target.checked)}
-                  className="mt-1 h-4 w-4 rounded border-slate-700 bg-slate-800 text-blue-600 accent-blue-600 focus:ring-0 focus:ring-offset-0"
+                  className="mt-1 h-4 w-4 rounded border-zinc-800 bg-zinc-900 text-[#ff9900] accent-[#ff9900] focus:ring-0 focus:ring-offset-0"
                 />
-                <span className="text-xs text-slate-400 select-none leading-relaxed transition-colors group-hover:text-slate-300">
+                <span className="text-xs text-zinc-400 select-none leading-relaxed transition-colors group-hover:text-zinc-300 font-medium">
                   I agree to the{" "}
-                  <Link href="/terms" target="_blank" className="text-blue-500 hover:underline">
+                  <Link href="/terms" target="_blank" className="text-[#ff9900] font-bold hover:underline">
                     Terms of Service
                   </Link>{" "}
                   and{" "}
-                  <Link href="/privacy" target="_blank" className="text-blue-500 hover:underline">
+                  <Link href="/privacy" target="_blank" className="text-[#ff9900] font-bold hover:underline">
                     Privacy Policy
                   </Link>
                   .
@@ -120,14 +120,14 @@ export default function AgeWarningModal() {
               <div className="flex flex-col gap-3 sm:flex-row">
                 <button
                   onClick={handleDecline}
-                  className="flex-1 rounded-xl border border-slate-800 bg-slate-900/50 py-3 text-sm font-semibold text-slate-300 transition-all hover:bg-slate-800 hover:text-white"
+                  className="flex-1 rounded-xl border border-zinc-800 bg-zinc-950 py-3 text-xs font-black uppercase tracking-wider text-zinc-400 transition-all hover:bg-zinc-900 hover:text-white"
                 >
                   Leave
                 </button>
                 <button
                   onClick={handleAccept}
                   disabled={!isAgreed}
-                  className="flex-1 rounded-xl bg-blue-600 py-3 text-sm font-bold text-white transition-all hover:bg-blue-500 disabled:opacity-40 disabled:cursor-not-allowed shadow-md shadow-blue-500/10"
+                  className="flex-1 rounded-xl bg-[#ff9900] py-3 text-xs font-black uppercase tracking-wider text-black transition-all hover:bg-[#ff9900]/95 disabled:opacity-40 disabled:cursor-not-allowed shadow-md shadow-[#ff9900]/10"
                 >
                   Enter
                 </button>
