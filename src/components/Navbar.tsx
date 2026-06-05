@@ -56,10 +56,10 @@ export default function Navbar() {
             </form>
           </div>
 
-          <div className="hidden md:flex items-center gap-6 text-sm font-semibold text-zinc-300">
-            <Link href="/?category=Trending" className="transition-colors hover:text-[#ff9900]">Trending</Link>
-            <Link href="/categories" className="transition-colors hover:text-[#ff9900]">Categories</Link>
-          </div>
+          {/*<div className="hidden md:flex items-center gap-6 text-sm font-semibold text-zinc-300">*/}
+          {/*  <Link href="/?category=Trending" className="transition-colors hover:text-[#ff9900]">Trending</Link>*/}
+          {/*  <Link href="/categories" className="transition-colors hover:text-[#ff9900]">Categories</Link>*/}
+          {/*</div>*/}
 
           {/* Mobile menu button */}
           <div className="flex items-center md:hidden">
@@ -93,22 +93,22 @@ export default function Navbar() {
                 placeholder="Search videos..."
               />
             </form>
-            <div className="flex flex-col space-y-3 pl-1">
-              <Link
-                href="/?category=Trending"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-zinc-350 hover:text-[#ff9900] text-sm font-semibold transition-colors"
-              >
-                Trending
-              </Link>
-              <Link
-                href="/categories"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-zinc-350 hover:text-[#ff9900] text-sm font-semibold transition-colors"
-              >
-                Categories
-              </Link>
-            </div>
+            {/*<div className="flex flex-col space-y-3 pl-1">*/}
+            {/*  <Link*/}
+            {/*    href="/?category=Trending"*/}
+            {/*    onClick={() => setIsMobileMenuOpen(false)}*/}
+            {/*    className="text-zinc-350 hover:text-[#ff9900] text-sm font-semibold transition-colors"*/}
+            {/*  >*/}
+            {/*    Trending*/}
+            {/*  </Link>*/}
+            {/*  <Link*/}
+            {/*    href="/categories"*/}
+            {/*    onClick={() => setIsMobileMenuOpen(false)}*/}
+            {/*    className="text-zinc-350 hover:text-[#ff9900] text-sm font-semibold transition-colors"*/}
+            {/*  >*/}
+            {/*    Categories*/}
+            {/*  </Link>*/}
+            {/*</div>*/}
           </div>
         </div>
       )}

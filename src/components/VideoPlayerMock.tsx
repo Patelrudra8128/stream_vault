@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { 
   Play, Pause, Volume2, VolumeX, Maximize2, Settings, Loader2
 } from "lucide-react";
-import Link from "next/link";
+// import Link from "next/link";
 import type { Video } from "@/data/videos";
 
 interface VideoPlayerMockProps {
