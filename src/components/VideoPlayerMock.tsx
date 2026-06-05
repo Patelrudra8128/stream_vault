@@ -2,8 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { 
-  Play, Pause, Volume2, VolumeX, Maximize2, Settings, Loader2, 
-  ThumbsUp, ThumbsDown, Share2, Download, CheckCircle2 
+  Play, Pause, Volume2, VolumeX, Maximize2, Settings, Loader2
 } from "lucide-react";
 import Link from "next/link";
 import type { Video } from "@/data/videos";
@@ -18,20 +17,20 @@ export default function VideoPlayerMock({ video }: VideoPlayerMockProps) {
   const [isMuted, setIsMuted] = useState(false);
   const [progress, setProgress] = useState(0);
   const [activeFrameIndex, setActiveFrameIndex] = useState(0);
-  const [isLiked, setIsLiked] = useState<boolean | null>(null);
-  const [isSubscribed, setIsSubscribed] = useState(false);
+  // const [isLiked, setIsLiked] = useState<boolean | null>(null);
+  // const [isSubscribed, setIsSubscribed] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [selectedQuality, setSelectedQuality] = useState("1080p");
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const progressRef = useRef<NodeJS.Timeout | null>(null);
 
   // Dynamic deterministic stats matching home page
-  const seed = video.id.charCodeAt(1) || 75;
-  const rawViews = ((seed * 13) % 450) + 50;
-  const views = `${rawViews}K`;
-  const ratingBase = ((seed * 7) % 15) + 85;
-  const [likeCount, setLikeCount] = useState(Math.round(rawViews * ratingBase * 10));
-  const [dislikeCount, setDislikeCount] = useState(Math.round(rawViews * (100 - ratingBase) * 10));
+  // const seed = video.id.charCodeAt(1) || 75;
+  // const rawViews = ((seed * 13) % 450) + 50;
+  // const views = `${rawViews}K`;
+  // const ratingBase = ((seed * 7) % 15) + 85;
+  // const [likeCount, setLikeCount] = useState(Math.round(rawViews * ratingBase * 10));
+  // const [dislikeCount, setDislikeCount] = useState(Math.round(rawViews * (100 - ratingBase) * 10));
 
   const gallery = video.gallery && video.gallery.length > 0 ? video.gallery : [video.thumbnail];
 
@@ -78,6 +77,7 @@ export default function VideoPlayerMock({ video }: VideoPlayerMockProps) {
     setIsPlaying(!isPlaying);
   };
 
+  /*
   const handleLike = () => {
     if (isLiked === true) {
       setIsLiked(null);
@@ -103,6 +103,7 @@ export default function VideoPlayerMock({ video }: VideoPlayerMockProps) {
       setDislikeCount(prev => prev + 1);
     }
   };
+  */
 
   const currentDurationInSeconds = Math.round((progress / 100) * 312); // Mock 5:12 (312s)
   const formatTime = (seconds: number) => {
@@ -111,7 +112,7 @@ export default function VideoPlayerMock({ video }: VideoPlayerMockProps) {
     return `${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
   };
 
-  const likeRatio = Math.round((likeCount / (likeCount + dislikeCount)) * 100);
+  // const likeRatio = Math.round((likeCount / (likeCount + dislikeCount)) * 100);
 
   return (
     <div className="flex flex-col gap-6">
@@ -225,7 +226,7 @@ export default function VideoPlayerMock({ video }: VideoPlayerMockProps) {
         </h1>
 
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          {/* Uploader Profile & Stats */}
+          {/* Uploader Profile & Stats (Commented Out)
           <div className="flex items-center gap-3">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-900 border border-zinc-800 font-black text-sm text-[#ff9900]">
               {video.sourceName.charAt(0)}
@@ -249,10 +250,10 @@ export default function VideoPlayerMock({ video }: VideoPlayerMockProps) {
               {isSubscribed ? "Subscribed" : "Subscribe"}
             </button>
           </div>
+          */}
 
-          {/* Social Stats Action Buttons */}
+          {/* Social Stats Action Buttons (Commented Out)
           <div className="flex flex-wrap items-center gap-2">
-            {/* Likes / Dislikes Rating */}
             <div className="flex items-center rounded-lg bg-zinc-950 p-1 border border-zinc-850">
               <button 
                 onClick={handleLike}
@@ -274,7 +275,6 @@ export default function VideoPlayerMock({ video }: VideoPlayerMockProps) {
               </button>
             </div>
 
-            {/* General Actions */}
             <div className="flex items-center gap-1 text-zinc-400">
               <button className="flex items-center gap-1 rounded-lg bg-zinc-900 border border-zinc-850 px-3 py-1.5 text-xs font-bold uppercase hover:bg-zinc-850 transition-colors">
                 <Share2 className="h-3.5 w-3.5" />
@@ -290,9 +290,10 @@ export default function VideoPlayerMock({ video }: VideoPlayerMockProps) {
               </Link>
             </div>
           </div>
+          */}
         </div>
 
-        {/* View count & visual rating bar */}
+        {/* View count & visual rating bar (Commented Out)
         <div className="mt-4 flex flex-col gap-1.5">
           <div className="flex items-center justify-between text-[11px] font-bold text-zinc-500 uppercase">
             <span>{views} Views</span>
@@ -303,6 +304,7 @@ export default function VideoPlayerMock({ video }: VideoPlayerMockProps) {
             <div className="h-full bg-zinc-850" style={{ width: `${100 - likeRatio}%` }} />
           </div>
         </div>
+        */}
       </div>
 
       {/* Description & Tags Card */}
@@ -313,26 +315,26 @@ export default function VideoPlayerMock({ video }: VideoPlayerMockProps) {
             This stream indexes full preview captures and screenshots for video file catalogued under the tags: {video.tags.join(", ")}. Follow instructions on the next page to fetch external streaming mirrors.
           </p>
         </div>
-        <div>
-          <h3 className="text-xs font-black uppercase tracking-wider text-zinc-500 mb-2">Category & Tags</h3>
-          <div className="flex flex-wrap gap-1.5">
-            <Link 
-              href={`/?category=${video.category}`}
-              className="rounded bg-zinc-900 border border-zinc-850 hover:border-[#ff9900]/30 hover:text-[#ff9900] text-zinc-400 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider transition-colors"
-            >
-              Category: {video.category}
-            </Link>
-            {video.tags.map((tag) => (
-              <Link
-                key={tag}
-                href={`/?search=${encodeURIComponent(tag)}`}
-                className="rounded bg-zinc-900 border border-zinc-850 hover:border-[#ff9900]/30 hover:text-[#ff9900] text-zinc-400 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider transition-colors"
-              >
-                #{tag}
-              </Link>
-            ))}
-          </div>
-        </div>
+        {/*<div>*/}
+        {/*  <h3 className="text-xs font-black uppercase tracking-wider text-zinc-500 mb-2">Category & Tags</h3>*/}
+        {/*  <div className="flex flex-wrap gap-1.5">*/}
+        {/*    <Link */}
+        {/*      href={`/?category=${video.category}`}*/}
+        {/*      className="rounded bg-zinc-900 border border-zinc-850 hover:border-[#ff9900]/30 hover:text-[#ff9900] text-zinc-400 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider transition-colors"*/}
+        {/*    >*/}
+        {/*      Category: {video.category}*/}
+        {/*    </Link>*/}
+        {/*    {video.tags.map((tag) => (*/}
+        {/*      <Link*/}
+        {/*        key={tag}*/}
+        {/*        href={`/?search=${encodeURIComponent(tag)}`}*/}
+        {/*        className="rounded bg-zinc-900 border border-zinc-850 hover:border-[#ff9900]/30 hover:text-[#ff9900] text-zinc-400 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider transition-colors"*/}
+        {/*      >*/}
+        {/*        #{tag}*/}
+        {/*      </Link>*/}
+        {/*    ))}*/}
+        {/*  </div>*/}
+        {/*</div>*/}
       </div>
     </div>
   );

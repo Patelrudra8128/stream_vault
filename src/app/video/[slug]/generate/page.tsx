@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { videos, isVideoUrl } from "@/data/videos";
-import { ChevronLeft, ShieldCheck, FileVideo, Server, Image as ImageIcon } from "lucide-react";
+import { ChevronLeft, Image as ImageIcon } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
 import { GenerateLinkAction } from "./GenerateLinkAction";
@@ -24,17 +24,17 @@ export default function GenerateLinkPage({ params }: { params: { slug: string } 
   }
 
   // Calculate authentic deterministic file data
-  const seed = video.id.charCodeAt(1) || 75;
-  const fileSize = `${((seed * 1.8) % 250 + 90).toFixed(1)} MB`;
+  // const seed = video.id.charCodeAt(1) || 75;
+  // const fileSize = `${((seed * 1.8) % 250 + 90).toFixed(1)} MB`;
 
-  let resolution = "1080p Full HD";
-  if (video.category === "VR") {
-    resolution = "8K VR 3D";
-  } else if (video.category === "Trending") {
-    resolution = "4K Ultra HD";
-  }
+  // let resolution = "1080p Full HD";
+  // if (video.category === "VR") {
+  //   resolution = "8K VR 3D";
+  // } else if (video.category === "Trending") {
+  //   resolution = "4K Ultra HD";
+  // }
 
-  const fileHash = `ea842d0a${seed}f882be1e7da92b2ff82c5`;
+  // const fileHash = `ea842d0a${seed}f882be1e7da92b2ff82c5`;
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
@@ -75,10 +75,9 @@ export default function GenerateLinkPage({ params }: { params: { slug: string } 
         </div>
       </div>
 
-      {/* Grid: File Info & Mirror Selection */}
+      {/* Grid: File Info & Mirror Selection (Commented Out)
       <div className="grid gap-6 md:grid-cols-5 mb-8">
 
-        {/* File Metadata Details Panel */}
         <div className="md:col-span-3 rounded-xl bg-zinc-950 p-5 border border-zinc-900 flex flex-col gap-4">
           <div className="border-b border-zinc-900 pb-3 flex items-center gap-2 text-zinc-400">
             <FileVideo className="h-4.5 w-4.5 text-[#ff9900]" />
@@ -105,7 +104,6 @@ export default function GenerateLinkPage({ params }: { params: { slug: string } 
           </div>
         </div>
 
-        {/* Mirror Server Selector */}
         <div className="md:col-span-2 rounded-xl bg-zinc-950 p-5 border border-zinc-900 flex flex-col gap-4">
           <div className="border-b border-zinc-900 pb-3 flex items-center gap-2 text-zinc-400">
             <Server className="h-4.5 w-4.5 text-[#ff9900]" />
@@ -132,6 +130,7 @@ export default function GenerateLinkPage({ params }: { params: { slug: string } 
         </div>
 
       </div>
+      */}
 
       {/* Generator Console Action Box */}
       <div className="flex flex-col gap-4 rounded-xl bg-zinc-950 border border-zinc-900 p-6">
@@ -139,9 +138,6 @@ export default function GenerateLinkPage({ params }: { params: { slug: string } 
           <GenerateLinkAction />
         </div>
       </div>
-
-      {/* Result Display Link */}
-      <GenerateResult sourceUrl={video.sourceUrl} />
 
       {/* Previews Checkpoint Scenes */}
       {video.gallery && video.gallery.length > 0 && (
@@ -170,6 +166,9 @@ export default function GenerateLinkPage({ params }: { params: { slug: string } 
           </div>
         </div>
       )}
+
+      {/* Result Display Link */}
+      <GenerateResult sourceUrl={video.sourceUrl} />
     </div>
   );
 }

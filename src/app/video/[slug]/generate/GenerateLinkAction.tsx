@@ -87,7 +87,7 @@ export function GenerateLinkAction() {
       onClick={handleStart}
       className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#ff9900] px-16 py-4.5 text-base font-black uppercase tracking-wider text-black transition-all hover:bg-[#ff9900]/90 active:scale-95 shadow-lg shadow-[#ff9900]/10"
     >
-      Generate Mirror Link
+      Generate Link
     </button>
   );
 }

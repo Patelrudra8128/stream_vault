@@ -4,7 +4,7 @@ import { useState, useEffect, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { videos } from "@/data/videos";
 import VideoCard from "@/components/VideoCard";
-import { SlidersHorizontal, Eye, Flame, Award } from "lucide-react";
+// import { SlidersHorizontal, Eye, Flame, Award } from "lucide-react";
 
 const CATEGORIES = ["All", "Trending", "VR", "Cosplay", "Featured", "Amateur"];
 
@@ -15,7 +15,7 @@ function HomeContent() {
   const searchQuery = searchParams.get("search") || "";
 
   const [activeCategory, setActiveCategory] = useState("All");
-  const [sortBy, setSortBy] = useState("trending");
+  const [sortBy] = useState("trending");
 
   useEffect(() => {
     if (categoryParam) {
@@ -30,6 +30,7 @@ function HomeContent() {
     setActiveCategory("All");
   }, [categoryParam]);
 
+  /*
   const handleCategoryChange = (cat: string) => {
     setActiveCategory(cat);
     const searchPart = searchQuery ? `&search=${encodeURIComponent(searchQuery)}` : "";
@@ -39,6 +40,7 @@ function HomeContent() {
       router.push(`/?category=${encodeURIComponent(cat)}${searchPart}`);
     }
   };
+  */
 
   // Helper functions matching card mock values for sorting
   const getViewsValue = (id: string) => {
@@ -95,9 +97,8 @@ function HomeContent() {
         </div>
       </div>
 
-      {/* Categories & Filter Bar */}
+      {/* Categories & Filter Bar (Commented Out)
       <div className="mb-8 flex flex-col gap-4 border-b border-zinc-800/80 pb-6 sm:flex-row sm:items-center sm:justify-between">
-        {/* Category Tabs */}
         <div className="flex flex-wrap gap-2">
           {CATEGORIES.map((cat) => {
             const isActive = activeCategory === cat;
@@ -117,7 +118,6 @@ function HomeContent() {
           })}
         </div>
 
-        {/* Sort Selectors */}
         <div className="flex items-center gap-2 self-end sm:self-auto">
           <SlidersHorizontal className="h-4 w-4 text-zinc-500" />
           <span className="text-xs font-bold text-zinc-500 uppercase">Sort:</span>
@@ -152,6 +152,7 @@ function HomeContent() {
           </div>
         </div>
       </div>
+      */}
 
       {/* Search query status banner */}
       {searchQuery && (
