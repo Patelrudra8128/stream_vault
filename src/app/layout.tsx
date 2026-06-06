@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import AgeWarningModal from "@/components/AgeWarningModal";
 import CookiePopup from "@/components/CookiePopup";
 import AdBlockWarningModal from "@/components/AdBlockWarningModal";
+import FirebaseTracker from "@/components/FirebaseTracker";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`${inter.className} min-h-screen bg-[#0b0f19] text-slate-100 antialiased`}>
         <Script src="https://quge5.com/88/tag.min.js" data-zone="244435" async data-cfasync="false" />
+        <FirebaseTracker />
         <AdBlockWarningModal />
         <AgeWarningModal />
         <CookiePopup />
