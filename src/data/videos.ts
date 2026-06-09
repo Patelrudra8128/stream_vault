@@ -226,6 +226,26 @@ export const videos: Video[] = [
       "/11/5.jfif",
     ]
   },
+  {
+    id: "v12",
+    slug: "v12",
+    title: "B**bs pressed and sucked by a friend",
+    description: "Experience the vibrant, dangerous world of Night City in this official gameplay trailer for Cyberpunk 2077. Dive deep into the neon-lit streets.",
+    thumbnail: "/12/1.jpg",
+    duration: "11:37",
+    category: "Trending",
+    tags: ["cyberpunk", "gaming", "neon", "trailer"],
+    sourceName: "YouTube",
+    sourceUrl: "https://flezen.com/s/d8ckg9hbjlnprs5it2k0rdmfxefqlrm",
+    gallery: [
+      "/12/1.jpg",
+      "/12/2.jpg",
+      "/12/3.jfif",
+      "/12/4.jfif",
+      "/12/5.jpg",
+      "/12/6.jpg",
+    ]
+  },
   // {
   //   id: "v2",
   //   slug: "vr-chat-funny-moments",
