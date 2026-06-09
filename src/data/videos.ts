@@ -168,6 +168,45 @@ export const videos: Video[] = [
       "/screenshots/3/5.jfif",
     ]
   },
+  {
+    id: "v9",
+    slug: "v9",
+    title: "Asian GF having s*x with BF on the floor",
+    description: "Experience the vibrant, dangerous world of Night City in this official gameplay trailer for Cyberpunk 2077. Dive deep into the neon-lit streets.",
+    thumbnail: "/9/1.jpg",
+    duration: "00:42",
+    category: "Trending",
+    tags: ["cyberpunk", "gaming", "neon", "trailer"],
+    sourceName: "YouTube",
+    sourceUrl: "https://flezen.com/s/d8iagd1bjlnj4kq2d9d0bj2m2c1cmje",
+    gallery: [
+      "/9/1.jpg",
+      "/9/2.jpg",
+      "/9/3.jpg",
+      "/9/4.jpg",
+    ]
+  },
+  {
+    id: "v10",
+    slug: "v10",
+    title: "Model having fun with BF",
+    description: "Experience the vibrant, dangerous world of Night City in this official gameplay trailer for Cyberpunk 2077. Dive deep into the neon-lit streets.",
+    thumbnail: "/10/1.jfif",
+    duration: "04:17",
+    category: "Trending",
+    tags: ["cyberpunk", "gaming", "neon", "trailer"],
+    sourceName: "YouTube",
+    sourceUrl: "https://flezen.com/s/d8iadu9bjlnj4kq2cqkgqovysfunuzg",
+    gallery: [
+      "/10/1.jfif",
+      "/10/2.jfif",
+      "/10/3.jfif",
+      "/10/4.jfif",
+      "/10/5.jfif",
+      "/10/6.jfif",
+      "/10/7.jfif",
+    ]
+  },
   // {
   //   id: "v2",
   //   slug: "vr-chat-funny-moments",
