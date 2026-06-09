@@ -207,6 +207,25 @@ export const videos: Video[] = [
       "/10/7.jfif",
     ]
   },
+  {
+    id: "v11",
+    slug: "v11",
+    title: "Principal ki beti aakhir maan gayi ab sare exam m pass ho jaunga",
+    description: "Experience the vibrant, dangerous world of Night City in this official gameplay trailer for Cyberpunk 2077. Dive deep into the neon-lit streets.",
+    thumbnail: "/11/1.jfif",
+    duration: "11:58",
+    category: "Trending",
+    tags: ["cyberpunk", "gaming", "neon", "trailer"],
+    sourceName: "YouTube",
+    sourceUrl: "https://flezen.com/s/d8eqv4pbjlnukbcir3pgck3lqozwynm",
+    gallery: [
+      "/11/1.jfif",
+      "/11/2.jfif",
+      "/11/3.jfif",
+      "/11/4.jfif",
+      "/11/5.jfif",
+    ]
+  },
   // {
   //   id: "v2",
   //   slug: "vr-chat-funny-moments",
