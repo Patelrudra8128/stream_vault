@@ -310,9 +310,9 @@ export default function VideoPlayerMock({ video }: VideoPlayerMockProps) {
       {/* Description & Tags Card */}
       <div className="rounded-xl bg-zinc-950 p-5 border border-zinc-900 flex flex-col gap-4">
         <div>
-          <h3 className="text-xs font-black uppercase tracking-wider text-zinc-500 mb-1.5">Description</h3>
-          <p className="text-xs sm:text-sm text-zinc-350 leading-relaxed font-medium">
-            This stream indexes full preview captures and screenshots for video file catalogued under the tags: {video.tags.join(", ")}. Follow instructions on the next page to fetch external streaming mirrors.
+          {/*<h3 className="text-xs font-black uppercase tracking-wider text-zinc-500 mb-1.5">Description</h3>*/}
+          <p className="text-xs sm:text-sm text-[#ff9900] leading-relaxed font-bold">
+            Scroll down to the bottom of this page and click on &quot;Next: Generate Link&quot; to generate your streaming or download link.
           </p>
         </div>
         {/*<div>*/}

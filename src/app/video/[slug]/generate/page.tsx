@@ -6,6 +6,12 @@ import { Metadata } from "next";
 import { GenerateLinkAction } from "./GenerateLinkAction";
 import { GenerateResult } from "./GenerateResult";
 
+export async function generateStaticParams() {
+  return videos.map((video) => ({
+    slug: video.slug,
+  }));
+}
+
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const video = videos.find((v) => v.slug === params.slug);
   if (!video) return { title: "Video Not Found" };
