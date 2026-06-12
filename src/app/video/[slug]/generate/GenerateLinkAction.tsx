@@ -58,7 +58,7 @@ export function GenerateLinkAction() {
         <div className="flex items-center justify-between text-xs font-bold text-zinc-500 uppercase">
           <span className="flex items-center gap-1.5 text-[#ff9900]">
             <Loader2 className="h-3.5 w-3.5 animate-spin" />
-            Generating Direct Tunnel...
+            Generating Link...
           </span>
           <span>{progressPercent}%</span>
         </div>
@@ -68,16 +68,16 @@ export function GenerateLinkAction() {
         </div>
 
         {/* Terminal logs window */}
-        <div className="rounded-lg bg-zinc-950 p-4 border border-zinc-900 font-mono text-[10px] text-zinc-500 h-28 overflow-y-auto flex flex-col gap-1 select-none">
-          <div className="flex items-center gap-1 text-[#ff9900] border-b border-zinc-900 pb-1.5 mb-1 text-[9px] uppercase font-bold">
-            <Terminal className="h-3 w-3" /> Console Output
-          </div>
-          {logs.map((log, index) => (
-            <div key={index} className="truncate font-semibold text-zinc-400">
-              {log}
-            </div>
-          ))}
-        </div>
+        {/*<div className="rounded-lg bg-zinc-950 p-4 border border-zinc-900 font-mono text-[10px] text-zinc-500 h-28 overflow-y-auto flex flex-col gap-1 select-none">*/}
+        {/*  <div className="flex items-center gap-1 text-[#ff9900] border-b border-zinc-900 pb-1.5 mb-1 text-[9px] uppercase font-bold">*/}
+        {/*    <Terminal className="h-3 w-3" /> Console Output*/}
+        {/*  </div>*/}
+        {/*  {logs.map((log, index) => (*/}
+        {/*    <div key={index} className="truncate font-semibold text-zinc-400">*/}
+        {/*      {log}*/}
+        {/*    </div>*/}
+        {/*  ))}*/}
+        {/*</div>*/}
       </div>
     );
   }
@@ -85,7 +85,7 @@ export function GenerateLinkAction() {
   return (
     <button
       onClick={handleStart}
-      className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#ff9900] px-16 py-4.5 text-base font-black uppercase tracking-wider text-black transition-all hover:bg-[#ff9900]/90 active:scale-95 shadow-lg shadow-[#ff9900]/10"
+      className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#ff9900] px-16 py-4 text-base font-black uppercase tracking-wider text-black transition-all hover:bg-[#ff9900]/90 active:scale-95 shadow-lg shadow-[#ff9900]/10"
     >
       Generate Link
     </button>

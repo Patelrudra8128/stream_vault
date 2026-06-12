@@ -312,7 +312,7 @@ export default function VideoPlayerMock({ video }: VideoPlayerMockProps) {
         <div>
           {/*<h3 className="text-xs font-black uppercase tracking-wider text-zinc-500 mb-1.5">Description</h3>*/}
           <p className="text-xs sm:text-sm text-[#ff9900] leading-relaxed font-bold">
-            Scroll down to the bottom of this page and click on &quot;Next: Generate Link&quot; to generate your streaming or download link.
+            Scroll down to the bottom of this page and click on &quot;Generate Link&quot; to generate your streaming or download link.
           </p>
         </div>
         {/*<div>*/}

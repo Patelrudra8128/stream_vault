@@ -72,7 +72,7 @@ export default function VideoPage({ params }: { params: { slug: string } }) {
           href={`/video/${video.slug}/generate`}
           className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#ff9900] px-16 py-4 text-base font-black uppercase tracking-wider text-black transition-all hover:bg-[#ff9900]/90 active:scale-95 shadow-lg shadow-[#ff9900]/10"
         >
-          Next: Generate Link <ArrowRight className="h-5 w-5" />
+          Generate Link <ArrowRight className="h-5 w-5" />
         </Link>
       </div>
     </div>
