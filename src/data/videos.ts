@@ -455,6 +455,61 @@ export const videos: Video[] = [
       "/22/7.jfif",
     ]
   },
+  {
+    id: "v23",
+    slug: "v23",
+    title: "Such a desirable client",
+    description: "Experience the vibrant, dangerous world of Night City in this official gameplay trailer for Cyberpunk 2077. Dive deep into the neon-lit streets.",
+    thumbnail: "/23/thumbnail.jpg",
+    duration: "36:13",
+    category: "Trending",
+    tags: ["cyberpunk", "gaming", "neon", "trailer"],
+    sourceName: "YouTube",
+    sourceUrl: "https://nowplayto.com/2064550372449587201",
+    gallery: [
+      "/23/1.jfif",
+      "/23/2.jfif",
+      "/23/3.jfif ",
+      "/23/4.jfif",
+    ]
+  },
+  {
+    id: "v24",
+    slug: "v24",
+    title: "Yoga session turns into a wild fu*king with a hot instructor",
+    description: "Experience the vibrant, dangerous world of Night City in this official gameplay trailer for Cyberpunk 2077. Dive deep into the neon-lit streets.",
+    thumbnail: "/24/thumbnail.jpg",
+    duration: "54:28",
+    category: "Trending",
+    tags: ["cyberpunk", "gaming", "neon", "trailer"],
+    sourceName: "YouTube",
+    sourceUrl: "https://nowplaytoc.com/2064550390011138049",
+    gallery: [
+      "/24/1.jfif",
+      "/24/2.jfif",
+      "/24/3.jfif ",
+      "/24/4.jfif",
+    ]
+  },
+  {
+    id: "v25",
+    slug: "v25",
+    title: "Brown haired Sara Blonde gets pen*trated in doggy style",
+    description: "Experience the vibrant, dangerous world of Night City in this official gameplay trailer for Cyberpunk 2077. Dive deep into the neon-lit streets.",
+    thumbnail: "/25/thumbnail.jpg",
+    duration: "11:00",
+    category: "Trending",
+    tags: ["cyberpunk", "gaming", "neon", "trailer"],
+    sourceName: "YouTube",
+    sourceUrl: "https://nowplaytoc.com/2064550371963183105",
+    gallery: [
+      "/25/1.jfif",
+      "/25/2.jfif",
+      "/25/3.jfif ",
+      "/25/4.jfif",
+      "/25/5.jfif",
+    ]
+  },
   // {
   //   id: "v2",
   //   slug: "vr-chat-funny-moments",
