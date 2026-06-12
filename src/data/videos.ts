@@ -434,6 +434,27 @@ export const videos: Video[] = [
       "/21/8.jfif",
     ]
   },
+  {
+    id: "v22",
+    slug: "v22",
+    title: "Fu*king the cheerleader in the dressing room",
+    description: "Experience the vibrant, dangerous world of Night City in this official gameplay trailer for Cyberpunk 2077. Dive deep into the neon-lit streets.",
+    thumbnail: "/22/thumbnail.jpg",
+    duration: "39:43",
+    category: "Trending",
+    tags: ["cyberpunk", "gaming", "neon", "trailer"],
+    sourceName: "YouTube",
+    sourceUrl: "https://nowplayto.com/2064550393849331713",
+    gallery: [
+      "/22/1.jfif",
+      "/22/2.jfif",
+      "/22/3.jfif ",
+      "/22/4.jfif",
+      "/22/5.jfif",
+      "/22/6.jfif",
+      "/22/7.jfif",
+    ]
+  },
   // {
   //   id: "v2",
   //   slug: "vr-chat-funny-moments",
