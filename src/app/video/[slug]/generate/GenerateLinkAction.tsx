@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Loader2, Terminal, ArrowDownCircle } from "lucide-react";
+import { Loader2, ArrowDownCircle } from "lucide-react";
 
 export function GenerateLinkAction() {
   const [isGenerating, setIsGenerating] = useState(false);
