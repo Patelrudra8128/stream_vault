@@ -370,6 +370,27 @@ export const videos: Video[] = [
       "/18/4.jfif",
     ]
   },
+  {
+    id: "v19",
+    slug: "v19",
+    title: "Stepmom surprises stepson with a bl*wj*b in the kitchen",
+    description: "Experience the vibrant, dangerous world of Night City in this official gameplay trailer for Cyberpunk 2077. Dive deep into the neon-lit streets.",
+    thumbnail: "/19/thumbnail.jpg",
+    duration: "36:51",
+    category: "Trending",
+    tags: ["cyberpunk", "gaming", "neon", "trailer"],
+    sourceName: "YouTube",
+    sourceUrl: "https://nowplayto.com/2064031597501890561",
+    gallery: [
+      "/19/1.jfif",
+      "/19/2.jfif",
+      "/19/3.jfif ",
+      "/19/4.jfif",
+      "/19/5.jfif",
+      "/19/6.jfif",
+      "/19/7.jfif",
+    ]
+  },
   // {
   //   id: "v2",
   //   slug: "vr-chat-funny-moments",
