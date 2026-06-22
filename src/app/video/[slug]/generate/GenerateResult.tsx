@@ -13,6 +13,18 @@ export function GenerateResult({ sourceUrl }: { sourceUrl: string }) {
 
   if (!isReady) return null;
 
+  const handleWatch = () => {
+    const smartLink = process.env.NEXT_PUBLIC_MONETAG_SMART_LINK;
+    if (smartLink) {
+      try {
+        window.open(smartLink, "_blank");
+      } catch (err) {
+        console.error("Popup blocked or failed to open:", err);
+      }
+    }
+    window.location.href = sourceUrl;
+  };
+
   return (
     <div className="mt-16 mb-12 flex flex-col items-center gap-6 border-t border-zinc-900 pt-16">
       <div className="min-h-[40vh] flex flex-col items-center justify-center w-full gap-4">
@@ -22,14 +34,13 @@ export function GenerateResult({ sourceUrl }: { sourceUrl: string }) {
           <Play className="h-3.5 w-3.5 fill-current" /> Direct Streaming Token Valid
         </div>
 
-        <a
-          href={sourceUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          onClick={handleWatch}
           className="inline-flex items-center justify-center gap-2.5 rounded-xl bg-[#ff9900] px-14 py-5 text-lg font-black uppercase tracking-wider text-black transition-all hover:bg-[#ff9900]/90 hover:scale-[1.02] active:scale-95 shadow-xl shadow-[#ff9900]/15"
         >
           Watch on Source Host <ExternalLink className="h-5 w-5" />
-        </a>
+        </button>
+
         
         <p className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider max-w-sm text-center leading-relaxed mt-2">
           Note: This redirects to external verified server partners. Make sure to keep your security configuration active.

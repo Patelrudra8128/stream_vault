@@ -74,8 +74,22 @@ export default function VideoPlayerMock({ video }: VideoPlayerMockProps) {
   }, [isPlaying, isBuffering, gallery.length]);
 
   const handlePlayToggle = () => {
+    // Monetag Smart Link Popunder integration
+    const smartLink = process.env.NEXT_PUBLIC_MONETAG_SMART_LINK;
+    if (smartLink && !isPlaying) {
+      const hasPopped = sessionStorage.getItem("sv_player_popped");
+      if (!hasPopped) {
+        try {
+          window.open(smartLink, "_blank");
+          sessionStorage.setItem("sv_player_popped", "true");
+        } catch (e) {
+          console.error("Popup blocked or failed to open:", e);
+        }
+      }
+    }
     setIsPlaying(!isPlaying);
   };
+
 
   /*
   const handleLike = () => {
